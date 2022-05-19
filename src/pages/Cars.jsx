@@ -104,8 +104,8 @@ function Cars() {
                                                     : "fade-up-right"
                                                 : window.innerWidth >= 821
                                                 ? index % 2 === 0
-                                                    ? "fade-up-left"
-                                                    : "fade-up-right"
+                                                    ? "fade-up-right"
+                                                    : "fade-up-left"
                                                 : "fade-up"
                                         }
                                     />

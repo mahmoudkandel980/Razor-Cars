@@ -1,4 +1,10 @@
 .spinner--container {
+    height: 40rem;
+    @media (max-width: $bp-small) {
+        height: 40vh;
+    }
+
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
