@@ -1,0 +1,129 @@
+.form {
+    &-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2.4rem;
+
+        label {
+            font-size: $default-fontsize;
+            color: $color-white;
+        }
+
+        input[type="file"]::-webkit-file-upload-button {
+            background-color: $color-grey-light-4;
+
+            padding: 0.8rem 1.6rem;
+            margin-right: 1.6rem;
+            border-radius: 4px;
+            color: $color-dark-2;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            font-size: 1.6rem;
+            padding: 1.2rem 2.4rem;
+            font-weight: 600;
+            border-radius: 4px;
+            color: $color-white;
+            background-color: transparent !important;
+            border: 1px solid $color-grey-dark-3;
+            outline: none;
+            transition: all 0.3s;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+
+            option {
+                background-color: $color-dark-2;
+                font-size: 1.6rem;
+                margin-top: 1.6rem;
+            }
+
+            option:first-child {
+                display: none;
+            }
+
+            &:focus {
+                border: 1px solid $color-white;
+                outline: none;
+            }
+
+            &::placeholder {
+                font-size: 1.6rem;
+                font-weight: 300;
+                color: $color-grey-light-4;
+            }
+
+            &:placeholder-shown {
+                color: $color-white;
+            }
+        }
+    }
+
+    .input-group {
+        display: grid;
+        grid-template-columns: 1fr 12fr;
+        color: $color-white;
+        background-color: transparent !important;
+
+        &__icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $color-grey-dark-3;
+            border-right: none;
+            border-bottom-left-radius: 4px;
+            border-top-left-radius: 4px;
+            grid-column: 1;
+            grid-row: 1;
+
+            .icon {
+                background-color: transparent !important;
+                width: 2.4rem;
+                height: 2.4rem;
+                color: $color-grey-light-4;
+            }
+        }
+
+        input {
+            grid-column: 2;
+        }
+    }
+
+    input:focus ~ .input-group__icon,
+    textarea:focus ~ .input-group__icon,
+    select:focus ~ .input-group__icon {
+        border: 1px solid $color-white;
+        border-right: none;
+    }
+
+    input:focus ~ .input-group__icon .icon,
+    textarea:focus ~ .input-group__icon .icon,
+    select:focus ~ .input-group__icon .icon {
+        color: $color-white;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+
+        button {
+            cursor: pointer;
+            width: 50%;
+            color: $color-dark-2;
+            &:hover {
+                transform: translateY(-2px) scale(0.99);
+                background-color: rgba($color-dark-1, 0.2);
+                color: $color-white;
+            }
+        }
+    }
+}
+
+/*
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/

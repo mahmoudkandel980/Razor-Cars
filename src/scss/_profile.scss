@@ -1,0 +1,179 @@
+.profile {
+    background-color: $color-dark-2;
+    padding: 12.8rem 0;
+    position: relative;
+
+    .form {
+        width: 95%;
+    }
+
+    &-text {
+        position: absolute;
+        top: 35.5rem;
+        right: 5%;
+        cursor: pointer;
+
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                @media (max-width: $bp-medium) {
+                    display: none;
+                }
+            }
+        }
+
+        .icon {
+            width: 2.4rem;
+            height: 2.4rem;
+            margin-left: 0.8rem;
+        }
+    }
+
+    .change-text {
+        color: $color-whatsapp;
+    }
+
+    .done-text {
+        color: $color-twitter;
+    }
+
+    .form {
+        max-width: 60rem;
+        margin-top: 2.4rem;
+    }
+
+    .jobs-section,
+    .reverce-section {
+        margin-top: 4.8em;
+        margin-bottom: 4.8em;
+        max-width: 80%;
+        // max-width: 50%;
+
+        @media (max-width: $bp-medium) {
+            max-width: 85%;
+        }
+        @media (max-width: $bp-small) {
+            max-width: 100%;
+        }
+
+        &__heading {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            margin-bottom: 1.2rem;
+
+            .icon {
+                margin-left: 1.6rem;
+                animation: shake-vertical 4s
+                    cubic-bezier(0.455, 0.03, 0.515, 0.955) both infinite;
+            }
+        }
+
+        .job {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+            width: 50%;
+
+            @media (max-width: $bp-small) {
+                width: 100%;
+            }
+
+            &:not(:last-of-type) {
+                margin-bottom: 3rem;
+            }
+
+            &__list {
+                list-style: none;
+                display: flex;
+                align-items: center;
+            }
+
+            &__list-item {
+                background-color: transparent;
+                color: $color-white;
+                width: 50%;
+
+                .delete-icon {
+                    width: 3.6rem;
+                    height: 3.6rem;
+                    color: $color-logout;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: 0.3s;
+
+                    &:hover {
+                        filter: brightness(120%);
+                        transform: translateZ(10rem) perspective(1000px)
+                            scale(1.1);
+                    }
+                }
+            }
+
+            .listitem__text {
+                width: 150%;
+            }
+        }
+    }
+
+    &-btn {
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: $bp-small) {
+            width: 80% !important;
+        }
+
+        span {
+            margin-right: 0.8rem;
+        }
+    }
+
+    .logout-btn {
+        color: $color-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $default-fontsize;
+        span {
+            margin-right: 0.8rem;
+        }
+    }
+}
+
+.p-0 {
+    padding: 0;
+}
+
+@keyframes shake-vertical {
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    20%,
+    40%,
+    60% {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+    }
+    80% {
+        -webkit-transform: translateY(1.6px);
+        transform: translateY(1.6px);
+    }
+    90% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}

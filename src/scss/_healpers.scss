@@ -1,0 +1,79 @@
+.container {
+    display: grid;
+    max-width: 180rem;
+    column-gap: 2.4rem;
+    row-gap: 4.4rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+}
+
+.heading {
+    font-family: "Pacifico", cursive;
+    color: $color-white;
+    position: relative;
+}
+
+.heading-primary {
+    font-size: 6.2rem;
+    // color: $color-white;
+}
+
+.heading-secondary {
+    font-size: 4.4rem;
+}
+
+.heading-tertiary {
+    font-size: 3rem;
+}
+
+.heading-fourth {
+    font-size: 2.4rem;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+.btn {
+    font-size: 1.6rem;
+    margin-top: 3.2rem;
+    outline: none;
+    padding: 1.2rem 2.4rem;
+    background-color: rgba($color-white, 0.7);
+    border-radius: 3px;
+    font-size: 2.4rem;
+    border: 1px solid rgba($color-dark-1, 0.2);
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba($color-white, 1);
+        border-color: rgba($color-dark-1, 1);
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $color-white;
+}
+
+.text {
+    color: $color-white;
+    font-size: $default-fontsize;
+}
+
+.mb-large {
+    margin-bottom: 4.8rem;
+}
+
+.btn-disabled {
+    cursor: not-allowed !important;
+    opacity: 0.5 !important;
+}
+
+/*
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/

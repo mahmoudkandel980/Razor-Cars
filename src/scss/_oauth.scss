@@ -1,0 +1,35 @@
+.socialLogin {
+    margin-top: 2.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &-text {
+        color: $color-white;
+    }
+
+    .social-buttons {
+        display: flex;
+
+        .facebook-btn,
+        .google-btn {
+            display: flex;
+            width: fit-content !important;
+            margin-top: 0.8rem !important;
+            padding: 0.8rem;
+            border-radius: 50%;
+        }
+
+        .facebook-btn {
+            color: $color-facebook;
+            margin-left: 0.8rem;
+        }
+    }
+}
+/*
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/

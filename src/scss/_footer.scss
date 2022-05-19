@@ -1,0 +1,194 @@
+.footer {
+    padding: 12.8rem 0;
+    background-color: $color-dark-1;
+    position: relative;
+
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        max-width: 140rem;
+    }
+
+    .logo-img {
+        display: block;
+        width: 70%;
+        max-width: 20rem;
+        margin: 0 auto;
+        margin-bottom: 2.4rem;
+    }
+
+    &__social {
+        display: flex;
+        justify-content: space-evenly;
+
+        a:link,
+        a:visited {
+            color: $color-white;
+            width: 3.4rem;
+
+            .icon {
+                border-radius: 50%;
+                width: 3.6rem;
+                height: 3.6rem;
+                filter: brightness(80%);
+                transition: all 0.3s;
+
+                &:hover {
+                    filter: brightness(100%);
+                    transform: scale(1.2);
+                }
+            }
+
+            .facebook-icon {
+                color: $color-facebook;
+                background-color: #fff;
+            }
+
+            .instagram-icon {
+                background-image: linear-gradient(
+                    to left bottom,
+                    $color-instagram-1,
+                    $color-instagram-2,
+                    $color-instagram-3,
+                    $color-instagram-4,
+                    $color-instagram-5,
+                    $color-instagram-6,
+                    $color-instagram-7
+                );
+            }
+
+            .twitter-icon {
+                color: $color-twitter;
+                background-color: $color-white;
+            }
+
+            .whatsapp-icon {
+                background-color: $color-whatsapp;
+                color: $color-white;
+            }
+        }
+    }
+
+    &__text {
+        margin-top: 3.4rem;
+        font-size: 1.6rem;
+        color: $color-white;
+    }
+
+    &-header {
+        margin-bottom: 2.4rem;
+        display: inline-block;
+        color: $color-white;
+
+        @media (max-width: $bp-medium) {
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    .contact-nav {
+        list-style: none;
+
+        .contact {
+            &-item {
+                &:not(:last-child) {
+                    margin-bottom: 0.8rem;
+                }
+            }
+
+            &-link:link,
+            &-link:visited {
+                display: grid;
+                grid-template-columns: 1fr 5fr;
+                align-items: center;
+                text-decoration: none;
+                color: $color-white;
+                font-size: $default-fontsize;
+
+                span {
+                    transition: all 0.3s;
+                }
+            }
+
+            &-link:hover span,
+            &-link:active span {
+                transform: translateY(-1px) scale(0.95);
+            }
+        }
+
+        .icon {
+            width: 2.4rem !important;
+            height: 2.4rem !important;
+            margin-right: 0.8rem;
+        }
+        .location-icon {
+            color: $color-location;
+        }
+
+        .telephone-icon {
+            color: $color-telphone;
+        }
+
+        .mail-icon {
+            color: $color-mail;
+        }
+    }
+
+    &-nav {
+        list-style: none;
+        font-size: $default-fontsize;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-item {
+        display: inline-block;
+        transform-origin: left;
+        position: relative;
+        transition: transform 0.2s;
+        margin-right: auto;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 3px;
+            background-color: $color-white;
+            transform: scaleY(0);
+            opacity: 0.75;
+            transition: transform 0.2s,
+                width 0.4s cubic-bezier(0.99, -0.09, 0, 1.11) 0.2s;
+        }
+
+        &:hover::before {
+            transform: scaleY(1);
+            width: 100%;
+        }
+    }
+
+    &-item:not(:last-child) {
+        margin-bottom: 0.8rem;
+    }
+
+    &-link:link,
+    &-link:visited {
+        text-decoration: none;
+        color: $color-white;
+        z-index: 10;
+        position: relative;
+        transition: all 0s 0.2s;
+    }
+
+    &-link:hover,
+    &-link:active {
+        padding: 0.8rem 1.6rem;
+        color: $color-dark-1;
+    }
+}
+/*
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/

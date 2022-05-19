@@ -1,0 +1,211 @@
+.reverce {
+    @media (max-width: $bp-small) {
+        border-radius: 5px;
+        padding: 3.2rem 1.6rem;
+    }
+    &:not(:last-of-type) {
+        margin-bottom: 3rem;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+
+        .cardata-carimage {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+
+            @media (max-width: $bp-medium) {
+                grid-template-columns: 1fr 2fr;
+            }
+            @media (max-width: $bp-small) {
+                grid-template-columns: 1fr;
+                grid-template-rows: 0.5fr 1fr;
+            }
+        }
+    }
+
+    &__list-item {
+        background-color: transparent;
+        color: $color-white;
+        width: 50%;
+
+        .image-container {
+            // width: 100%;
+            // height: 100%;
+        }
+
+        img {
+            width: 100%;
+            // height: 100%;
+            object-fit: cover;
+
+            // @media (max-width: $bp-small) {
+            //     width: 50%;
+            // }
+        }
+
+        .delete-icon {
+            width: 3.6rem;
+            height: 3.6rem;
+            color: $color-logout;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                filter: brightness(120%);
+                transform: translateZ(10rem) perspective(1000px) scale(1.1);
+            }
+        }
+    }
+
+    .listitem__image {
+        // align-self: flex-start;
+        width: 100%;
+    }
+
+    .listitem__text {
+        width: 100%;
+
+        .other-data {
+            &__list {
+                list-style: none;
+                margin-top: 1.2rem;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+
+                @media (max-width: $bp-large) {
+                    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+                }
+
+                &-item {
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.6rem;
+                    flex-wrap: wrap;
+
+                    &:not(:last-of-type) {
+                        margin-bottom: 0.8rem;
+                    }
+
+                    a:link,
+                    a:visited,
+                    span,
+                    div {
+                        color: $color-grey-light-4;
+                    }
+
+                    .icon-container {
+                        margin-right: 0.8rem;
+                        display: flex;
+                        align-items: center;
+
+                        span {
+                            margin-left: 0.3rem;
+                        }
+
+                        .icon {
+                            align-self: center;
+                            margin-bottom: 0.4rem;
+                        }
+
+                        .tel-icon {
+                            color: $color-telphone;
+                        }
+                        .crown-icon {
+                            color: $color-crown;
+                        }
+                        .email-icon {
+                            color: $color-mail;
+                            margin-bottom: 0;
+                        }
+                        .time-icon {
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    .owner-you {
+                        color: $color-crown;
+                    }
+
+                    .cardata {
+                        &-container {
+                            color: $color-white;
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            font-size: 1.6rem;
+                            margin-bottom: 1.2rem;
+
+                            span {
+                                color: $color-white;
+                                margin-right: 0.4rem;
+                            }
+                        }
+
+                        &__list {
+                            list-style: none;
+
+                            &-item {
+                                display: flex;
+                                align-items: center;
+                                margin-left: 2.4rem;
+
+                                &:not(:last-of-type) {
+                                    margin-bottom: 0.8rem;
+                                }
+
+                                &--data {
+                                    display: flex;
+                                    align-items: center;
+
+                                    &__icon {
+                                        margin-right: 0.4rem;
+                                    }
+
+                                    span {
+                                        margin-right: 1.4rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .date-container {
+                        .date-time {
+                            display: flex;
+                            align-items: center;
+
+                            span:first-child {
+                                margin-right: 1.6rem;
+                            }
+                        }
+                    }
+                }
+
+                .car-data__list {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .listitem__deleteicon {
+        width: fit-content;
+    }
+}
+
+.notExist {
+    background-color: rgba($color-logout, 0.1);
+
+    .deletecar {
+        color: $color-logout !important;
+        animation: text-flicker-in-glow 4s linear both;
+
+        &:hover {
+            color: $color-white !important;
+        }
+    }
+}

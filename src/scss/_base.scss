@@ -1,0 +1,80 @@
+$default-fontsize: 2rem;
+$color-white: #fff;
+
+$color-grey-light-1: #faf9f9;
+$color-grey-light-2: #f4f2f2;
+$color-grey-light-3: #f0eeee;
+$color-grey-light-4: #ccc;
+
+$color-grey-dark-1: #333;
+$color-grey-dark-2: #444;
+$color-grey-dark-3: #777;
+$color-grey-dark-4: #999;
+
+$color-dark: #000;
+$color-dark-1: #111;
+$color-dark-2: #222;
+
+$color-facebook: #1778f2;
+$color-twitter: #00acee;
+$color-whatsapp: #25d366;
+
+$color-instagram-1: #405de6;
+$color-instagram-2: #5851d8;
+$color-instagram-3: #833ab4;
+$color-instagram-4: #c13584;
+$color-instagram-5: #fd1d1d;
+$color-instagram-6: #f77737;
+$color-instagram-7: #ffdc80;
+
+$color-location: #fd1d1d;
+$color-telphone: #51cf66;
+$color-crown: #fcc419;
+$color-mail: #4dabf7;
+
+$color-favourite: #e03131;
+$color-logout: #f03e3e;
+$color-active: #37b24d;
+$color-notExist: #ff8787;
+
+$shadow-light: 0 2rem 6rem rgba(255, 255, 255, 0.05);
+$shadow-dark: 0 2rem 5rem rgba(255, 255, 255, 0.02);
+
+$line: 1px solid var(--color-grey-light-2);
+
+$bp-largest: 75em; //1200px
+$bp-large: 68.75em; //1100px
+$bp-medium: 56.25em; //900px
+$bp-small: 37.5em; //600px
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    overflow-x: hidden;
+
+    @media (max-width: $bp-largest) {
+        font-size: 56.25%;
+    }
+
+    @media (max-width: $bp-medium) {
+        font-size: 50%;
+    }
+
+    overflow-x: hidden;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}

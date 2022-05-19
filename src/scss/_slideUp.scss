@@ -1,0 +1,63 @@
+.show-slide-up {
+    animation: slide-in-elliptic-bottom-fwd 0.7s
+        cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.slideup {
+    position: fixed;
+    bottom: 4.8rem;
+    right: 3.2rem;
+    z-index: 3000;
+
+    @media (max-width: $bp-medium) {
+        right: 1.6rem;
+    }
+
+    &-btn {
+        background-color: $color-white;
+        filter: brightness(200%);
+        position: relative;
+        height: 4.4rem;
+        border-radius: 50%;
+
+        &:hover {
+            background-color: $color-grey-light-4 !important;
+            transform: perspective(1000px) translateY(-3px) translateZ(10rem) !important;
+            filter: brightness(100%);
+        }
+    }
+
+    &-icon {
+        color: $color-dark-1;
+        width: 3.2rem;
+        height: 3.2rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes slide-in-elliptic-bottom-fwd {
+    0% {
+        -webkit-transform: translateY(600px) rotateX(30deg) scale(0);
+        transform: translateY(600px) rotateX(30deg) scale(0);
+        -webkit-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0) rotateX(0) scale(1);
+        transform: translateY(0) rotateX(0) scale(1);
+        -webkit-transform-origin: 50% -1400px;
+        transform-origin: 50% -1400px;
+        opacity: 1;
+    }
+}
+
+/*
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/

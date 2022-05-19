@@ -1,0 +1,25 @@
+.sell-car {
+    width: 100vw;
+    background-color: $color-dark-2;
+    padding: 12.8rem 0;
+
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    }
+
+    .from-flex {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        column-gap: 2.4rem;
+    }
+
+    .form-group-upload {
+        .input-group {
+            input {
+                cursor: pointer;
+                padding: 0;
+            }
+        }
+    }
+}

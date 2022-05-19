@@ -1,0 +1,52 @@
+.about {
+    background-color: $color-dark-2;
+    padding: 12.8rem 0;
+
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    }
+
+    &__text {
+        color: $color-white;
+        font-size: $default-fontsize;
+    }
+
+    .btn-contact {
+        margin-bottom: 6.4rem;
+    }
+
+    .btn-car {
+        margin-right: 3.2rem;
+    }
+
+    .btn-contact,
+    .btn-car,
+    .btn-motorbike {
+        &:hover {
+            transform: translateY(-2px) scale(0.99);
+            background-color: rgba($color-dark-1, 0.2);
+
+            a {
+                color: $color-white;
+            }
+        }
+    }
+
+    &__link {
+        color: $color-dark-2;
+    }
+
+    &__img {
+        display: flex;
+        align-items: center;
+        img {
+            width: 100%;
+        }
+    }
+}
+/*
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
