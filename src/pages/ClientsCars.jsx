@@ -13,6 +13,7 @@ function ClientsCars() {
     const FavCarsctx = useContext(CarsContext);
     const [cars, setCars] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [clientsCars, setClientsCars] = useState("");
 
     useEffect(() => {
         const fetchCars = async () => {
@@ -37,6 +38,14 @@ function ClientsCars() {
                     });
                 });
                 setLoading(false);
+                cars.forEach(
+                    (car) =>
+                        car.data.userRef !== "TPHWrvbU8WUOBQ215OJsUWcDnW32" &&
+                        setClientsCars((prevState) => ({
+                            ...prevState,
+                            ...car,
+                        }))
+                );
                 setCars(cars);
             } catch (error) {
                 toast.error("couldn`t fetch listings");
@@ -44,6 +53,7 @@ function ClientsCars() {
         };
         fetchCars();
     }, []);
+    console.log(clientsCars);
 
     return (
         <>
@@ -55,7 +65,7 @@ function ClientsCars() {
                 <div className="container">
                     {loading ? (
                         <Spinner />
-                    ) : cars && cars.length > 0 ? (
+                    ) : clientsCars && cars.length > 0 ? (
                         cars.map(
                             (car, index) =>
                                 car.data.userRef !==
@@ -109,7 +119,9 @@ function ClientsCars() {
                                 )
                         )
                     ) : (
-                        <p className="text">No cars to show</p>
+                        <p className="text">
+                            Clients did not display any cars for sale
+                        </p>
                     )}
                 </div>
             </div>
