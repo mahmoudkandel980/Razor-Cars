@@ -53,7 +53,6 @@ function ClientsCars() {
         };
         fetchCars();
     }, []);
-    console.log(clientsCars);
 
     return (
         <>
