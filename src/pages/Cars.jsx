@@ -98,10 +98,10 @@ function Cars() {
                                         fade={
                                             window.innerWidth >= 1379
                                                 ? (index + 1) % 3 === 1
-                        ? "fade-up-right"
-                        : (index + 1) % 3 === 2
-                        ? "fade-up"
-                        : "fade-up-left"
+                                                    ? "fade-up-right"
+                                                    : (index + 1) % 3 === 2
+                                                    ? "fade-up"
+                                                    : "fade-up-left"
                                                 : window.innerWidth >= 821
                                                 ? index % 2 === 0
                                                     ? "fade-up-right"
