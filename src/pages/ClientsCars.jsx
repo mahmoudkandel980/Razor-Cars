@@ -104,12 +104,12 @@ function ClientsCars() {
                                         fade={
                                             window.innerWidth >= 1379
                                                 ? (index + 1) % 3 === 1
-                                                    ? "fade-up-right"
-                                                    : (index + 1) % 3 === 2
                                                     ? "fade-up"
+                                                    : (index + 1) % 3 === 2
+                                                    ? "fade-up-right"
                                                     : "fade-up-left"
                                                 : window.innerWidth >= 821
-                                                ? index % 2 === 0
+                                                ? (index + 1) % 2 === 1
                                                     ? "fade-up-right"
                                                     : "fade-up-left"
                                                 : "fade-up"
